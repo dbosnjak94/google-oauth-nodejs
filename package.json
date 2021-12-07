@@ -1,0 +1,31 @@
+{
+  "name": "google-oauth-nodejs",
+  "version": "1.0.0",
+  "description": "Google OAuth With Node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbosnjak94/google-oauth-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbosnjak94/google-oauth-nodejs/issues"
+  },
+  "homepage": "https://github.com/dbosnjak94/google-oauth-nodejs#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "google-auth-library": "^7.10.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
