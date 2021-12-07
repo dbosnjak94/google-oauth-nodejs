@@ -1,4 +1,5 @@
 const cookieParser = require('cookie-parser');
+const { response } = require('express');
 const express = require('express');
 const app = express();
 
@@ -33,7 +34,20 @@ app.post('/login', (req, res)=> {
     const userId = payload['sub'];
     console.log(payload)
     }
-    verify().catch(console.error)
+    verify()
+    then(()=> {
+        res.cookie('session-token', token);
+        res.send('success');
+    }).catch(console.error)
+})
+
+app.get('/profile', (req, res) => {
+    let user = req.user;
+    res.render('profile', {user});
+})
+
+app.get('/protectedroute', (req, res)=> {
+    res.render('protectedroute.js')
 })
 
 app.get('/', (req, res) => {
